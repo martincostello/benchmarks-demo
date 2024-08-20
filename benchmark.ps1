@@ -4,7 +4,6 @@
 #Requires -Version 7
 
 param(
-    [Parameter(Mandatory = $false)][string] $Filter = "",
     [Parameter(Mandatory = $false)][string] $Framework = "net8.0",
     [Parameter(Mandatory = $false)][string] $Job = ""
 )
@@ -74,10 +73,7 @@ $benchmarks = (Join-Path $solutionPath "src" "DotNetBenchmarks" "DotNetBenchmark
 
 Write-Host "Running benchmarks..." -ForegroundColor Green
 
-$additionalArgs = @(
-    "--filter",
-    [string]::IsNullOrEmpty($Filter) ? '`*' : $Filter
-)
+$additionalArgs = @()
 
 if (-Not [string]::IsNullOrEmpty($Job)) {
     $additionalArgs += "--job"
@@ -89,4 +85,4 @@ if (-Not [string]::IsNullOrEmpty(${env:GITHUB_SHA})) {
     $additionalArgs += "json"
 }
 
-& $dotnet run --project $benchmarks --configuration "Release" --framework $Framework -- $additionalArgs
+& $dotnet run --project $benchmarks --configuration "Release" --framework $Framework -- $additionalArgs --% --filter *
