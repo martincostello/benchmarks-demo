@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch benchmarks",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/DotNetBenchmarks/bin/Release/net8.0/DotNetBenchmarks.dll",
+      "args": [ "--configuration", "Release" ],
+      "cwd": "${workspaceFolder}/src/DotNetBenchmarks",
+      "stopAtEntry": false
+    }
+  ]
+}
