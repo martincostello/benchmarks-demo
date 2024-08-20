@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BC29E7B3-3191-47EE-848C-E782551C07C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetBenchmarks", "src\DotNetBenchmarks\DotNetBenchmarks.csproj", "{9E89D343-1334-4A2A-B549-058283738130}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66D0B7CA-9755-402F-84A4-936AD7C359BA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.vsconfig = .vsconfig
+		benchmark.ps1 = benchmark.ps1
+		build.ps1 = build.ps1
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		DotNetBenchmarks.ruleset = DotNetBenchmarks.ruleset
+		global.json = global.json
+		LICENSE = LICENSE
+		NuGet.config = NuGet.config
+		omnisharp.json = omnisharp.json
+		README.md = README.md
+		startvs.cmd = startvs.cmd
+		startvscode.cmd = startvscode.cmd
+		stylecop.json = stylecop.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E89D343-1334-4A2A-B549-058283738130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E89D343-1334-4A2A-B549-058283738130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E89D343-1334-4A2A-B549-058283738130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E89D343-1334-4A2A-B549-058283738130}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E89D343-1334-4A2A-B549-058283738130} = {BC29E7B3-3191-47EE-848C-E782551C07C0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {135A5BA5-4DA2-4189-86C9-2296BDFA7E04}
+	EndGlobalSection
+EndGlobal

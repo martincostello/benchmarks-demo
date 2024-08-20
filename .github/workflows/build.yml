@@ -1,0 +1,48 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
+  pull_request:
+    branches:
+      - main
+      - dotnet-vnext
+      - dotnet-nightly
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
+  FORCE_COLOR: 3
+  NUGET_XMLDOC_MODE: skip
+  TERM: xterm
+
+jobs:
+  build:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ macos-latest, ubuntu-latest, windows-latest ]
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+
+    - name: Build
+      shell: pwsh
+      run: ./build.ps1

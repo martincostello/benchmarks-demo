@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DotNetBenchmarks": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}
