@@ -18,8 +18,8 @@ Running the script will build the project and run the benchmarks. The results ar
 `BenchmarkDotNet.Artifacts` directory in the root of the repository. These results are then published
 to another repository, [martincostello/benchmarks][benchmark-repo], by the [benchmarkdotnet-results-publisher] action.
 
-The results are then viewable in the [GitHub Pages site][benchmark-site] that consumes the data to
-view trends over time.
+The results are then viewable in [a GitHub Pages site][benchmark-site] deployed from that repository
+that consumes the data to view trends over time.
 
 ## Feedback
 
@@ -37,7 +37,7 @@ This project is licensed under the [Apache 2.0][license] license.
 [benchmarkdotnet-results-publisher]: https://github.com/martincostello/benchmarkdotnet-results-publisher
 [benchmark-badge]: https://github.com/martincostello/benchmarks-demo/actions/workflows/benchmark.yml/badge.svg?branch=main&event=push
 [benchmark-code]: https://github.com/martincostello/benchmarks-demo/tree/main/src/DotNetBenchmarks
-[benchmark-repo]: https://github.com/martincostello/benchmarks
+[benchmark-repo]: https://github.com/martincostello/benchmarks/tree/main/benchmarks-demo
 [benchmark-site]: https://benchmarks.martincostello.com/?repo=benchmarks-demo&branch=main
 [benchmark-status]: https://github.com/martincostello/benchmarks-demo/actions?query=workflow%3Abenchmark+branch%3Amain+event%3Apush "Continuous benchmarks for this project"
 [build-badge]: https://github.com/martincostello/benchmarks-demo/actions/workflows/build.yml/badge.svg?branch=main&event=push
