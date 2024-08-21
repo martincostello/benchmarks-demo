@@ -9,6 +9,7 @@ Type[] benchmarks =
     typeof(HashBenchmarks),
     typeof(ILoggerFactoryBenchmarks),
     typeof(IndexOfAnyBenchmarks),
+    typeof(TodoAppBenchmarks),
 ];
 
 var switcher = new BenchmarkSwitcher(benchmarks);
