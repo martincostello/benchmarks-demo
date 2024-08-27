@@ -2,15 +2,6 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 
 using BenchmarkDotNet.Running;
-using DotNetBenchmarks;
 
-Type[] benchmarks =
-[
-    typeof(HashBenchmarks),
-    typeof(ILoggerFactoryBenchmarks),
-    typeof(IndexOfAnyBenchmarks),
-    typeof(TodoAppBenchmarks),
-];
-
-var switcher = new BenchmarkSwitcher(benchmarks);
+var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
 switcher.Run(args);
