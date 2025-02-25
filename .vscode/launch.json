@@ -6,8 +6,11 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/DotNetBenchmarks/bin/Release/net9.0/DotNetBenchmarks.dll",
-      "args": [ "--configuration", "Release" ],
+      "program": "${workspaceFolder}/src/DotNetBenchmarks/bin/Release/net10.0/DotNetBenchmarks.dll",
+      "args": [
+        "--configuration",
+        "Release"
+      ],
       "cwd": "${workspaceFolder}/src/DotNetBenchmarks",
       "stopAtEntry": false
     }
