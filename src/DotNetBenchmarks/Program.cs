@@ -4,4 +4,7 @@
 using BenchmarkDotNet.Running;
 
 var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
-switcher.Run(args);
+
+var summary = switcher.Run(args);
+
+return summary.Reports.Any((p) => !p.Success) ? 1 : 0;
