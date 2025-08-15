@@ -21,13 +21,15 @@ on:
     - cron: '0 1 * * MON-FRI'
   workflow_dispatch:
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   benchmark:
     name: benchmark
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
 
     steps:
 
