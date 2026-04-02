@@ -5,6 +5,6 @@ using BenchmarkDotNet.Running;
 
 var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
 
-var results = switcher.Run(args);
+var results = await switcher.RunAsync(args);
 
 return results.Any((p) => p.Reports.Any((r) => !r.Success)) ? 1 : 0;
