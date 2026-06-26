@@ -4,7 +4,7 @@
 #Requires -Version 7
 
 param(
-    [Parameter(Mandatory = $false)][string] $Framework = "net10.0",
+    [Parameter(Mandatory = $false)][string] $Framework = "net11.0",
     [Parameter(Mandatory = $false)][string] $Job = ""
 )
 
@@ -73,7 +73,9 @@ $benchmarks = (Join-Path $solutionPath "src" "DotNetBenchmarks" "DotNetBenchmark
 
 Write-Host "Running benchmarks..." -ForegroundColor Green
 
-$additionalArgs = @()
+$additionalArgs = @(
+    "--consumeTasksSynchronously" # For backwards compatibility with BenchmarkDotNet versions before 0.16.0
+)
 
 if (-Not [string]::IsNullOrEmpty($Job)) {
     $additionalArgs += "--job"
