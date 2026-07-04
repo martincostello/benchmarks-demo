@@ -73,7 +73,9 @@ $benchmarks = (Join-Path $solutionPath "src" "DotNetBenchmarks" "DotNetBenchmark
 
 Write-Host "Running benchmarks..." -ForegroundColor Green
 
-$additionalArgs = @()
+$additionalArgs = @(
+    "--consumeTasksSynchronously" # For backwards compatibility with BenchmarkDotNet versions before 0.16.0
+)
 
 if (-Not [string]::IsNullOrEmpty($Job)) {
     $additionalArgs += "--job"
