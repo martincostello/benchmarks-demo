@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/DotNetBenchmarks/bin/Release/net11.0/DotNetBenchmarks.dll",
+      "program": "${workspaceFolder}/artifacts/bin/DotNetBenchmarks/release/DotNetBenchmarks.dll",
       "args": [
         "--configuration",
         "Release"
